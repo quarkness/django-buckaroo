@@ -1,0 +1,9 @@
+{% extends "buckaroo/payload.xml" %}
+
+  
+{% block message %}
+<Content>
+  <Transaction>{{ transactionkey }}</Transaction>
+  <Invoice>{{ invoice }}</Invoice>
+</Content>
+{% endblock message %}

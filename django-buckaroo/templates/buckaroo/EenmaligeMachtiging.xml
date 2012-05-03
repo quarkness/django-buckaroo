@@ -1,0 +1,22 @@
+{% extends "buckaroo/payload.xml" %}
+{% block message %}
+  <Content>
+    <Transaction Id="{{ counter }}">
+      <Customer>
+        <Gender>{{ gender }}</Gender>
+        <Firstname>{{ firstname }}</Firstname>
+        <Lastname>{{ lastname }}</Lastname>
+        <Mail>{{ mail }}</Mail>
+      </Customer>
+      {% if clientip %}<ClientIp>{{ clientip }}</ClientIp>{% endif %}
+      <AccountNumber>{{ accountnumber }}</AccountNumber>
+      <AccountName>{{ accountname }}</AccountName>
+      <Amount Currency="{{ currency }}">{{ amount }}</Amount>
+      <CollectDate>{{ collectdate }}</CollectDate>
+      <CollectType>{{ collecttype }}</CollectType>
+      <Invoice>{{ invoice }}</Invoice>
+      <Reference>{{ reference }}</Reference>
+      <Description>{{ description }}</Description>
+    </Transaction>
+  </Content>
+{% endblock message %}

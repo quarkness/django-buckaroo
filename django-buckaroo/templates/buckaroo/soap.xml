@@ -1,0 +1,18 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:pay="https://payment.buckaroo.nl/">
+   <soap:Header/>
+   <soap:Body>
+      <pay:{{ method }}>
+        <pay:XMLMessage>
+{{ payload }}
+        </pay:XMLMessage>
+        <pay:XMLSignature>
+          <Signature xmlns="">
+            <Fingerprint>{{ fingerprint }}</Fingerprint>
+            <DigestMethod>{{ digestmethod }}</DigestMethod>
+            <CalculateMethod>{{ calculatemethod }}</CalculateMethod>
+            <SignatureValue>{{ signaturevalue }}</SignatureValue>
+          </Signature>
+        </pay:XMLSignature>
+      </pay:{{ method }}>
+   </soap:Body>
+</soap:Envelope>

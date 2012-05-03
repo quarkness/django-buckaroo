@@ -1,0 +1,9 @@
+<Payload xmlns="" VersionID="1.0">
+	<Control Language="{{ language }}" Test="{{ test }}"{% if teststatus %} TestStatus="{{ teststatus }}"{% endif %}>
+	  <SenderSessionID>{{ sendersessionid }}</SenderSessionID>
+	  <Timestamp>{{ timestamp }}</Timestamp>
+	  <MerchantID>{{ merchantid }}</MerchantID>
+	</Control>
+{% block message %}
+{% endblock message %}
+</Payload>
